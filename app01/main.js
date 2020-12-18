@@ -1,0 +1,8 @@
+const axios = require('axios');
+
+axios
+    .get('https://api.exchangeratesapi.io/latest')
+    .then(function(res) {
+        console.log(`สกุลเงินแลกเปลี่ยน ${res.data.base}`);
+        console.log(`ต่อไทยบาท ${res.data.rates.THB}`);
+    });
